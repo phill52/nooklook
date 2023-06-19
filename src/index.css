@@ -68,7 +68,7 @@ button:disabled{
   cursor: not-allowed;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -79,4 +79,4 @@ button:disabled{
   button {
     background-color: #f9f9f9;
   }
-}
+} */
