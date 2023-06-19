@@ -62,7 +62,12 @@ html {
     -webkit-user-select: none;
     -ms-user-select: none;
     filter: contrast(0%) brightness(50%);
-}
+    pointer-events: none; 
+    -webkit-touch-callout: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    user-select: none;
+  }
 
 
 .icons-container{
