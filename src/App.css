@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  @font-face{
+  font-family: 'FinkHeavy';
+  /* src: url('/fonts/FinkHeavy.ttf') format('truetype'); */
+  src: url('/fonts/FinkHeavy.woff') format('woff');
+  src: url('/fonts/FinkHeavy.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Path: src\index.css */
+html {
+  font-family: 'FinkHeavy', sans-serif;
+}
+
+.app{
+  background-color:#F5FFE4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  font-family: 'FinkHeavy', sans-serif;
+}
+
+.appbody{
+  background-color:#F5FFE4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 1rem;
+  font-family: 'FinkHeavy', sans-serif;
+}
+
+.villager-icon img{
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  display: block;
+  transition: filter 1s ease;
+}
+
+.villager-icon img.unfound {
+  filter: contrast(0%) brightness(50%);
+}
+
+.unfound{
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    filter: contrast(0%) brightness(50%);
+}
+
+
+.icons-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 20rem;
+  background-color: lightgrey;
+  border-radius: 1rem;
+}
+
+header {
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  background-image: url('./assets/grassbackground.jpg');
+  width: 100%;
+  height: 5rem;
+  background-size: cover;
+  font-family: 'FinkHeavy', sans-serif;
+  clip-path: polygon(0% 61%, 3% 78%, 9% 51%, 12% 63%, 17% 49%, 25% 71%, 33% 53%, 37% 64%, 44% 50%, 55% 62%, 61% 43%, 65% 65%, 72% 39%, 77% 63%, 81% 46%, 85% 58%, 90% 47%, 95% 58%, 100% 40%, 100% 0%, 0% 0%);
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+  text-align: center;
+  color:#faffbe;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+input{
+  background-color: #FFF6E3;
+}
+
+.wood1{
+  background-image: url('./assets/woodtexture.png');
+  background-size: 250%;
+  background-color:brown;
+}
+
+.foundBox{
+  width:4rem;
+  justify-content: center;
+  align-content: center;
+  height: 2.2rem;
+  padding-top: 0.4rem;
+  color:#FFEDAB;
+
+}
+
+.timerBox{
+  width:6rem;
+  justify-content: center;
+  align-content: center;
+  height: 2.2rem;
+  padding-top: 0.4rem;
+  color:#FFEDAB;
+}
+
+.nameBox{
+  width:35rem;
+  height: 8rem;
+  padding-left: 2.2rem;
+  padding-top: 0.8rem;
+  align-content: center;
+  color:#FFEDAB;
+  /* -webkit-clip-path: polygon(80% 1%, 28% 3%, 17% 18%, 0% 21%, 2% 41%, 75% 47%, 82% 31%); */
+  clip-path: polygon(80% 1%, 28% 3%, 20% 10%, 0% 15%, 2% 41%, 75% 47%, 82% 31%);
+  /* clip-path: polygon(3% 37%, 4% 64%, 81% 77%, 87% 59%, 80% 19%, 39% 25%, 30% 35%); */
+}
+
+.upside-down-trapezoid {
+  clip-path: polygon(13% 5%, 86% 1%, 100% 100%, 0 100%);
+}
+
+@media only screen and (max-width: 600px) {
+  .nameBox {
+    position: fixed;
+    top: 3.5rem;
+    width: 100%;
+    height: 10rem;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    clip-path: polygon(89.17% 3%, 28% 3%, 20% 10%, 0% 15%, 2% 41%, 91.5% 48%, 100% 25%);
+    justify-content: space-around;
+  }
+
+  .nameVillager{
+    padding-top: 0.1rem;
+    font-size:1rem;
+  }
+  .inputBox{
+    width: 14rem;
+  }
+  
+  .timerBox{
+    position: fixed;
+    top: 8.5rem;
+    left: 16rem;
+  }
+  .foundBox{
+    position: fixed;
+    top: 8.5rem;
+    left: 2rem;
+  }
+
+}
+
+.giveUp{
+  position: fixed;
+  bottom: 1rem;
+  left:1rem;
+}
+
+.tyBox{
+  bottom: 2rem;
+  background-color:#FFEDAB;
+  align-self:last baseline;
+  z-index: 2;
+  margin-top: 5rem;
+  color: red;
+  border-radius: 1rem;
+  margin: 1;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  max-height: 90vh; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1; 
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
