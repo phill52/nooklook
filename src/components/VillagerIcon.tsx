@@ -6,7 +6,7 @@ export default function VillagerIcon(props: {villager: Villager}) {
   const iconName = `${isFound ? "Villager Icon" : `${villager.name.toLocaleUpperCase()} Icon`}`;
   return (
     <div className="villager-icon">
-      <img src={villager.icon_url} alt={iconName} className={isFound? "" : "unfound"}/>
+      <img src={villager.icon_url} alt={iconName} className={isFound? "" : "unfound"} onContextMenu={(e)=>e.preventDefault()} />
     </div>
   );
 }
